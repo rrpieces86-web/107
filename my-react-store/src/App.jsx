@@ -3,7 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar';
 import Footer from './components/footer';
 import Catalog from './pages/catalog';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [count, setCount] = useState(0)
