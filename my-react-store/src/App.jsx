@@ -9,38 +9,42 @@ import Admin from './pages/admin';
 import NotFound from './pages/NotFound';
 import Footer from './components/footer';
 import Navbar from './components/Navbar';
+import GlobalProvider from './state/globalProvider';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <BrowserRouter>
-      <div>
-        <Navbar/>
+    <GlobalProvider>
 
-        <main className='bg-info py-4 px-5'>
+      <BrowserRouter>
+        <div>
+          <Navbar/>
 
-        <Routes>
-          <Route path='/' element={<Home/>}></Route>
-          <Route path='/about' element={<About/>}></Route>
-          <Route path='/catalog' element={<Catalog/>}></Route>
-          <Route path='/admin' element={<Admin/>}></Route>
-          <Route path='/contact' element={<Contact/>}></Route>
-          <Route path="*" element={<NotFound/>}></Route>
+          <main className='bg-info py-4 px-5'>
+
+          <Routes>
+            <Route path='/' element={<Home/>}></Route>
+            <Route path='/about' element={<About/>}></Route>
+            <Route path='/catalog' element={<Catalog/>}></Route>
+            <Route path='/admin' element={<Admin/>}></Route>
+            <Route path='/contact' element={<Contact/>}></Route>
+            <Route path="*" element={<NotFound/>}></Route>
           
 
-        </Routes>
-        </main>
+          </Routes>
+          </main>
         
         
        
         
           
-      <Footer /> 
-      </div>
+        <Footer /> 
+        </div>
       
       </BrowserRouter> 
+    </GlobalProvider>
 
     
      
