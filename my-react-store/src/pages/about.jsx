@@ -25,7 +25,7 @@ function About() {
             <div>
                 <h1>More about us</h1>
                 <img width={500} src="https://www.bing.com/th/id/OIP.qXCc7_imMDQLcpRyBI04vwHaE8?w=261&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"/>
-                <p>welcome to our app! We want to thank you for choosing reece"S and include you into our huge family! Feel free to browse or place a rush order. Or just look around, any question or concerns feel free to contact us through our email. Feel free to fill out our form on our contact page!</p>
+                <p>welcome to our app! We want to thank you for choosing reece's and include you into our huge family! Feel free to browse or place a rush order. Or just look around, any question or concerns feel free to contact us through our email. Feel free to fill out our form on our contact page!</p>
             </div>
 
             {
