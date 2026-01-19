@@ -2,9 +2,21 @@ import { useContext } from "react";
 import GlobalContext from "../state/globalContext";
 import "./Navbar.css";
 import { Link } from 'react-router-dom'
+import { IconShoppingCart } from "@tabler/icons-react";
+
 
 function Navbar(){
   const user = useContext(GlobalContext).user
+  const cart = useContext(GlobalContext).cart
+
+  function getTotalItems() {
+    let sum = 0
+
+    for(let i=0; i < cart.length; i++) {
+      sum = sum + cart[i].quantity
+    }
+    return sum
+  }
     return(
         // NEW CODE: Complete Navbar component implementation
 
@@ -57,8 +69,12 @@ function Navbar(){
 
               </li>
             </ul>
-            <div>
-              <div>{user.name}</div>
+
+            <div className="d-flex align-items-center gap-2">
+              <div className="text-white">{user.name}</div>
+              <Link to={"/cart"} className="btn btn-dark">
+                <IconShoppingCart/>Cart {getTotalItems()}
+                </Link>
             </div>
             </div>
         </div>
